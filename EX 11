@@ -1,0 +1,7 @@
+https://url.io/ci/index.php/welcome/index
+
+Exercicio: Criar a rota /operacao/num1/num2
+
+Onde operacao pode ser soma, mult, subtracao e divisao
+
+O controller deve se chamar Calculadora.
