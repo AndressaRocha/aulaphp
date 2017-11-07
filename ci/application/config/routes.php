@@ -20,3 +20,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['aluno'] = 'aluno/mostrarForm';
 $route['aluno/cadastro'] = 'aluno/cadastrar';
+$route['logout'] = 'login/sair';

@@ -1,5 +1,4 @@
 <?php
-    require_once APPPATH."models/serianameable.php";
     class UsuarioDAO extends CI_Model{
         
         public function getUser($email,$senha){
@@ -10,15 +9,18 @@
 		    $usr = $this->db->get('Usuario');
 		    require_once APPPATH."models/usuario.php";
 		    if ($usr->num_rows()>0){
-		        $id = $usr->res()->id;
-		        $nome = $usr->res()->nome;
-		        $emailUsu = $usr->res()->email;
-		        $senhaUsu = $usr->res()->email;
-		        return new Usuario($id,$nome,$emailUsu,$senhaUsu);
+		        //SE FOSSEM VARIOS, FOR
+		        $usuario = $usr->result()[0];
+		        $id = $usuario->id;
+		        $nome = $usuario->nome;
+		        $emailUsu = $usuario->email;
+		        $senhaUsu = $usuario->senha;
+		        return new UsuarioModel($id,$nome,$emailUsu,$senhaUsu);
             }else{
                 return null;
             }
     
         }
     }
+    
 ?>

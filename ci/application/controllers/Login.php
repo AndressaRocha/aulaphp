@@ -7,6 +7,11 @@ class Login extends CI_Controller {
 		$this->load->view("login");
 	}
 	
+	public function sair(){
+		$this->session->unset_userdata("usuario");
+		redirect('/login/form','refresh');
+	}
+	
 	public function auth(){
 		$email = $this->input->post("email");
 		$senha = $this->input->post("senha");
@@ -16,10 +21,10 @@ class Login extends CI_Controller {
 		$usuario = $usrdao->getUser($email,$senha);
 		if(isset($usuario)){
 			$this->session->set_userdata("usuario",$usuario->getNome());
-		}
-		//$this->session->set_userdata("msg","Usuário Cadastrado");
-		redirect('/usuario/dashboard','refresh');
-
+			redirect('/usuario/dashboard','refresh');			
+		}else{
+		redirect('/login/form','refresh');
+        }
 	}
 }
 
