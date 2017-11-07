@@ -16,3 +16,11 @@
 [07-Nov-2017 16:35:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
 [07-Nov-2017 16:35:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [07-Nov-2017 16:35:32 UTC] PHP   4. Aluno->cadastrar() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[07-Nov-2017 18:09:28 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/ubuntu/workspace/ci/application/controllers/Usuario.php on line 7
+[07-Nov-2017 18:09:28 UTC] PHP Stack trace:
+[07-Nov-2017 18:09:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[07-Nov-2017 18:09:28 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[07-Nov-2017 18:10:06 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/ci/application/controllers/Login.php on line 17
+[07-Nov-2017 18:10:06 UTC] PHP Stack trace:
+[07-Nov-2017 18:10:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[07-Nov-2017 18:10:06 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
